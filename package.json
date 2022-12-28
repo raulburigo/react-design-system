@@ -1,7 +1,7 @@
 {
   "name": "raulburigo-test-comp",
   "private": false,
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "build/main/index.js",
   "types": "build/main/index.d.ts",
   "module": "build/module/index.js",
