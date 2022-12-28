@@ -1,11 +1,30 @@
-import { clsx } from 'clsx';
 import { IButtonProps } from "./types";
-import { Slot } from '@radix-ui/react-slot';
+import { styled } from "../../stitches.config";
 
-export function Button({children, asChild}: IButtonProps) {
-    const Comp = asChild ? Slot : 'button';
+const StyledButton = styled('button', {
+    borderRadius: '$3',
+    cursor: 'pointer',
+    border: 'none',
+    fontWeight: 600,
+    lineHeight: '1.5em',
+  
+    '&:hover': {
+      opacity: 0.9,
+    },
+  
+    '&:disabled': {
+      backgroundColor: '$gray6',
+      color: '$gray11',
+    },
+    backgroundColor: '$primary',
+    color: '$primaryText',
+    fontSize: '$3',
+    padding: '$2 $3',
+   
+  })
 
+export function Button({children}: IButtonProps) {
     return (
-        <Comp className={clsx("text-black py-4 px-3 rounded font-semibold color bg-cyan-500 hover:bg-cyan-300 text-sm w-full transition-colors focus:ring-2 ring-white")}>{children}</Comp>
+        <StyledButton>{children}</StyledButton>
     )
 }
