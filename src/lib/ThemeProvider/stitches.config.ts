@@ -2,6 +2,7 @@ import { createStitches } from '@stitches/react'
 import { gray } from '@radix-ui/colors'
 
 export const { styled, createTheme, globalCss } = createStitches({
+  prefix: 'mf',
   theme: {
     colors: {
       primary: '#002040',

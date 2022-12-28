@@ -8,19 +8,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup Node
-        uses: actions/setup-node@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: "16.x"
-          registry-url: "https://registry.npmjs.org"
+          node-version: 16
+
       - name: Install dependencies and build 🔧
         run: npm ci && npm run build
+
       - name: Publish package on NPM 📦
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   build-and-deploy-storybook:
+    needs: build-and-publish-npm
     runs-on: ubuntu-latest
 
     steps:
