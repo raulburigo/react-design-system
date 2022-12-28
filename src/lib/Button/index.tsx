@@ -1,3 +1,4 @@
+import { PropsWithChildren } from "react";
 import { styled } from "../ThemeProvider/stitches.config";
 import {
   DEFAULT_BUTTON_SIZE,
@@ -69,8 +70,9 @@ const StyledButton = styled('button', {
   },
 })
 
-export function Button({children}: IButtonProps) {
-    return (
-        <StyledButton>{children}</StyledButton>
-    )
+export function Button({children, ...props}: PropsWithChildren<IButtonProps>) {
+  return <StyledButton {...props}>{children}</StyledButton>
+
 }
+
+export default Button
