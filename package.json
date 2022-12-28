@@ -1,12 +1,15 @@
 {
-  "name": "react-design-system",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "raulburigo-test-comp",
+  "private": false,
+  "version": "0.0.5",
+  "main": "build/main/index.js",
+  "types": "build/main/index.d.ts",
+  "module": "build/module/index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
+    "clean": "rimraf build",
+    "build": "npm run clean && run-p build:*",
+    "build:main": "tsc -p config/tsconfig.build.json && tsc-alias -p config/tsconfig.build.json",
+    "build:module": "tsc -p config/tsconfig.module.build.json && tsc-alias -p config/tsconfig.module.build.json",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages"
@@ -29,11 +32,16 @@
     "@storybook/react": "^6.5.12",
     "@storybook/storybook-deployer": "^2.8.12",
     "@storybook/testing-library": "^0.0.13",
+    "@types/jest": "^29.2.4",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.1.0",
     "babel-loader": "^8.2.5",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "tsc-alias": "^1.8.2",
     "typescript": "^4.6.4",
-    "vite": "^3.1.0"
+    "vite": "^3.1.0",
+    "vite-plugin-dts": "^1.7.1"
   }
 }

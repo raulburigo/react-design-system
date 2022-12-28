@@ -1,5 +1,5 @@
 import { IButtonProps } from "./types";
-import { styled } from "../../stitches.config";
+import { styled } from "../ThemeProvider/stitches.config";
 
 const StyledButton = styled('button', {
     borderRadius: '$3',
