@@ -74,5 +74,3 @@ export function Button({children, ...props}: PropsWithChildren<IButtonProps>) {
   return <StyledButton {...props}>{children}</StyledButton>
 
 }
-
-export default Button
