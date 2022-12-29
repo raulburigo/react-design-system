@@ -1,6 +1,14 @@
-import { Meta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 import { Button } from ".";
 import { IButtonProps } from './types';
+import { within, userEvent } from '@storybook/testing-library'
+import { expect, jest } from '@storybook/jest'
+import {
+  DEFAULT_PRIMARY_COLOR,
+  DEFAULT_PRIMARY_TEXT_COLOR,
+  DEFAULT_SECONDARY_COLOR,
+  DEFAULT_SECONDARY_TEXT_COLOR
+} from '../ThemeProvider/stitches.config';
 
 export default {
   title: 'Atoms/Button',
@@ -15,17 +23,42 @@ export default {
   },
 } as Meta<IButtonProps>
   
-export const Default = {}
-export const Secondary = { args: { variant: 'secondary' } }
-export const Cancel = { args: { variant: 'cancel' } }
-export const Large = { args: { size: 'lg' } }
+export const Default: StoryObj = {
+  args: { onClick: () => console.log('hello') },
+  play: async ({ canvasElement }) => {
+    console.log = jest.fn();
+    const canvas = within(canvasElement)
+    const buttonEl = canvas.getByRole('button', { name: /Click here/i })
 
-export const LargeSecondary = {
+    expect(buttonEl.innerText).toBe('Click here')
+    expect(buttonEl).toHaveStyle(`background-color: ${DEFAULT_PRIMARY_COLOR}; color: ${DEFAULT_PRIMARY_TEXT_COLOR}`)
+
+    userEvent.click(buttonEl)
+
+    expect(console.log).toHaveBeenCalledWith('hello');
+  } 
+}
+
+export const Secondary: StoryObj = {
+  args: { variant: 'secondary' },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    const buttonEl = canvas.getByRole('button', { name: /Click here/i })
+
+    expect(buttonEl.innerText).toBe('Click here')
+    expect(buttonEl).toHaveStyle(`background-color: ${DEFAULT_SECONDARY_COLOR}; color: ${DEFAULT_SECONDARY_TEXT_COLOR}`)
+  }
+}
+
+export const Cancel: StoryObj = { args: { variant: 'cancel' } }
+export const Large: StoryObj = { args: { size: 'lg' } }
+
+export const LargeSecondary: StoryObj = {
   args: { ...Large.args, ...Secondary.args },
 }
 
-export const Disabled = { args: { disabled: true } }
-export const DisabledSecondary = {
+export const Disabled: StoryObj = { args: { disabled: true } }
+export const DisabledSecondary: StoryObj = {
   args: { ...Disabled.args, ...Secondary.args },
 }
-export const DisabledCancel = { args: { ...Disabled.args, ...Cancel.args } }
+export const DisabledCancel: StoryObj = { args: { ...Disabled.args, ...Cancel.args } }

@@ -9,13 +9,13 @@ export default {
 } as Meta
   
 export const Default: StoryObj = {
-    play: async ({ canvasElement }) => {
-        const canvas = within(canvasElement)
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
 
-        userEvent.click(canvas.getByTestId('clicar'))
+    userEvent.click(canvas.getByTestId('clicar'))
 
-        await waitFor(() => {
-          expect(canvas.getByText('testado')).toBeInTheDocument()
-        })
-    } 
+    await waitFor(() => {
+      expect(canvas.getByText('testado')).toBeInTheDocument()
+    })
+  } 
 }

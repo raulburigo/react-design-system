@@ -1,14 +1,19 @@
 import { createStitches } from '@stitches/react'
 import { gray } from '@radix-ui/colors'
 
+export const DEFAULT_PRIMARY_COLOR =  '#002040'
+export const DEFAULT_PRIMARY_TEXT_COLOR =  '#FFFFFF'
+export const DEFAULT_SECONDARY_COLOR =  '#00B395'
+export const DEFAULT_SECONDARY_TEXT_COLOR =  '#FFFFFF'
+
 export const { styled, createTheme, globalCss } = createStitches({
   prefix: 'mf',
   theme: {
     colors: {
-      primary: '#002040',
-      primaryText: '#FFFFFF',
-      secondary: '#00B395',
-      secondaryText: '#FFFFFF',
+      primary: DEFAULT_PRIMARY_COLOR,
+      primaryText: DEFAULT_PRIMARY_TEXT_COLOR,
+      secondary: DEFAULT_SECONDARY_COLOR,
+      secondaryText: DEFAULT_SECONDARY_TEXT_COLOR,
       ...gray,
     },
     fonts: {
