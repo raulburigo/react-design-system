@@ -2,6 +2,10 @@ name: Publish NPM and Storybook
 on:
   release:
     types: [created]
+
+env:
+  FLOW: PUBLISH
+
 jobs:
   build-and-publish-npm:
     runs-on: ubuntu-latest

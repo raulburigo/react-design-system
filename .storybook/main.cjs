@@ -1,3 +1,6 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 module.exports = {
   stories: [
     "../src/**/*.stories.mdx",
@@ -16,11 +19,15 @@ module.exports = {
     storyStoreV7: true,
     interactionsDebugger: true
   },
-  viteFinal: (config, {configType}) => {
-    console.log(configType)
-    if (configType === 'PRODUCTION') {
+  async viteFinal(config, {configType}) {
+    const teste = process.env.FLOW
+    console.log(teste)
+    
+    if (teste === 'PUBLISH') {
       config.base = '/react-design-system/'
     }
+    console.log(config)
     return config
+    
   }
 }
