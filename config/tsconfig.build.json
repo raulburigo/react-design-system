@@ -16,7 +16,7 @@
     "strict": true,
 
     "lib": ["es2017", "dom"],
-    "types": ["node", "jest"],
+    "types": ["node", "jest", "@testing-library/jest-dom"],
     "typeRoots": ["../node_modules/@types", "../src/types"],
     "baseUrl": "../",
     // "paths": {
