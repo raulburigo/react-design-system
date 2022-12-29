@@ -41,6 +41,13 @@ export const Default: StoryObj = {
 
 export const Secondary: StoryObj = {
   args: { variant: 'secondary' },
+  argTypes: {
+    variant: {
+      table: {
+        disable: true
+      }
+    }
+  },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
     const buttonEl = canvas.getByRole('button', { name: /Click here/i })
