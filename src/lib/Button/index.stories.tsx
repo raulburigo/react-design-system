@@ -25,6 +25,7 @@ export default {
 
 export const Default: StoryObj = {
   args: { onClick: () => console.log('hello') },
+  
   play: async ({ canvasElement }) => {
     console.log = jest.fn();
     const canvas = within(canvasElement)
