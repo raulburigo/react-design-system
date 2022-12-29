@@ -30,7 +30,7 @@ export const Default: StoryObj = {
     const canvas = within(canvasElement)
     const buttonEl = canvas.getByRole('button', { name: /Click here/i })
 
-    expect(buttonEl.innerText).toBe('Click here')
+    expect(buttonEl.innerText).toBe('Click heres')
     expect(buttonEl).toHaveStyle(`background-color: ${DEFAULT_PRIMARY_COLOR}; color: ${DEFAULT_PRIMARY_TEXT_COLOR}`)
 
     userEvent.click(buttonEl)
