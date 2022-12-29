@@ -1,6 +1,5 @@
 {
   "name": "raulburigo-test-comp",
-  "private": false,
   "version": "0.0.15",
   "main": "build/main/index.js",
   "types": "build/main/index.d.ts",
@@ -14,7 +13,8 @@
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "test-storybook": "test-storybook --verbose",
-    "test-storybook:ci": "concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"npm run build-storybook --quiet && npx http-server storybook-static --port 6006 --silent\" \"wait-on tcp:6006 && npm run test-storybook\""
+    "test-storybook:ci": "concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"npm run build-storybook --quiet && npx http-server storybook-static --port 6006 --silent\" \"wait-on tcp:6006 && npm run test-storybook\"",
+    "chromatic": "npx chromatic --project-token=173c02f4c04a"
   },
   "dependencies": {
     "@radix-ui/colors": "^0.1.8",
@@ -42,6 +42,7 @@
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.1.0",
     "babel-loader": "^8.2.5",
+    "chromatic": "^6.14.0",
     "concurrently": "^7.6.0",
     "http-server": "^14.1.1",
     "npm-run-all": "^4.1.5",
@@ -58,5 +59,8 @@
     "!**/*.spec.*",
     "!**/*.stories.*",
     "!**/*.json"
-  ]
+  ],
+  "readme": "ERROR: No README data found!",
+  "_id": "raulburigo-test-comp@0.0.15",
+  "packageManager": "yarn@3.1.1"
 }
