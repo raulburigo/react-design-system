@@ -22,7 +22,7 @@ export default {
     disabled: { control: 'boolean', defaultValue: false },
   },
 } as Meta<IButtonProps>
-  
+
 export const Default: StoryObj = {
   args: { onClick: () => console.log('hello') },
   play: async ({ canvasElement }) => {
