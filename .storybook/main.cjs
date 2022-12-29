@@ -16,11 +16,11 @@ module.exports = {
     storyStoreV7: true,
     interactionsDebugger: true
   },
-  // viteFinal: (config, {configType}) => {
-  //   console.log(configType)
-  //   // if (configType === 'PRODUCTION') {
-  //     config.base = '/react-design-system/'
-  //   // }
-  //   return config
-  // }
+  viteFinal: (config, {configType}) => {
+    console.log(configType)
+    if (configType === 'PRODUCTION') {
+      config.base = '/react-design-system/'
+    }
+    return config
+  }
 }
