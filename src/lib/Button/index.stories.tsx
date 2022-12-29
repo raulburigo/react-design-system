@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/react';
 import { Button } from ".";
-import { DEFAULT_BUTTON_SIZE, DEFAULT_BUTTON_VARIANT, IButtonProps } from './types';
+import { IButtonProps } from './types';
 
 export default {
   title: 'Atoms/Button',
@@ -9,8 +9,8 @@ export default {
     children: 'Click here',
   },
   argTypes: {
-    variant: { control: 'inline-radio', defaultValue: DEFAULT_BUTTON_VARIANT },
-    size: { control: 'inline-radio', defaultValue: DEFAULT_BUTTON_SIZE },
+    variant: { control: 'inline-radio' },
+    size: { control: 'inline-radio' },
     disabled: { control: 'boolean', defaultValue: false },
   },
 } as Meta<IButtonProps>

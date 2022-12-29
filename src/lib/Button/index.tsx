@@ -1,10 +1,6 @@
 import { PropsWithChildren } from "react";
 import { styled } from "../ThemeProvider/stitches.config";
-import {
-  DEFAULT_BUTTON_SIZE,
-  DEFAULT_BUTTON_VARIANT,
-  IButtonProps,
-} from './types'
+import { IButtonProps } from './types'
 
 const StyledButton = styled('button', {
   borderRadius: '$3',
@@ -65,8 +61,8 @@ const StyledButton = styled('button', {
   },
 
   defaultVariants: {
-    variant: DEFAULT_BUTTON_VARIANT,
-    size: DEFAULT_BUTTON_SIZE,
+    variant: 'primary',
+    size: 'md',
   },
 })
 
