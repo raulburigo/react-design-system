@@ -38,6 +38,6 @@ jobs:
         with:
           node-version: "14.x"
       - name: Install dependencies
-        run: yarn
+        run: npm ci --legacy-peer-deps
       - name: Run Storybook tests
-        run: yarn test-storybook:ci
+        run: npm run test-storybook:ci
