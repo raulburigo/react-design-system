@@ -1,32 +1,32 @@
 {
   "name": "raulburigo-test-comp",
-  "version": "0.0.15",
+  "version": "0.1.0-rc.1",
   "main": "build/main/index.js",
   "types": "build/main/index.d.ts",
   "module": "build/module/index.js",
   "scripts": {
     "clean": "rimraf build",
-    "build": "npm run clean && run-p build:*",
+    "build": "yarn clean && yarn build:main && yarn build:module",
     "build:main": "tsc -p config/tsconfig.build.json && tsc-alias -p config/tsconfig.build.json",
     "build:module": "tsc -p config/tsconfig.module.build.json && tsc-alias -p config/tsconfig.module.build.json",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages",
     "test-storybook": "test-storybook --verbose",
-    "test-storybook:ci": "concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"npm run build-storybook --quiet && npx http-server storybook-static --port 6006 --silent\" \"wait-on tcp:6006 && npm run test-storybook\"",
     "chromatic": "npx chromatic --project-token=173c02f4c04a",
-    "lint": "eslint . --ext .ts,.tsx"
+    "lint": "eslint . --ext .ts,.tsx",
+    "types:check": "tsc --skipLibCheck --noEmit",
+    "bump:stable": "yarn version apply --all",
+    "bump:next": "yarn version apply --all --prerelease",
+    "bump:check": "yarn version check"
   },
   "dependencies": {
     "@radix-ui/colors": "^0.1.8",
     "@radix-ui/react-checkbox": "^1.0.0",
     "@radix-ui/react-slot": "^1.0.0",
     "@stitches/react": "^1.2.8",
-    "phosphor-react": "^1.4.1"
-  },
-  "peerDependencies": {
-    "react": "^16.8 || ^17.0 || ^18.0",
-    "react-dom": "^16.8 || ^17.0 || ^18.0"
+    "phosphor-react": "^1.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
@@ -37,7 +37,6 @@
     "@storybook/builder-vite": "^0.2.4",
     "@storybook/jest": "^0.0.10",
     "@storybook/react": "^6.5.12",
-    "@storybook/storybook-deployer": "^2.8.12",
     "@storybook/test-runner": "^0.9.2",
     "@storybook/testing-library": "^0.0.13",
     "@types/jest": "^29.2.4",
@@ -48,14 +47,12 @@
     "@vitejs/plugin-react": "^2.1.0",
     "babel-loader": "^8.2.5",
     "chromatic": "^6.14.0",
-    "concurrently": "^7.6.0",
     "eslint": "^8.30.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
-    "http-server": "^14.1.1",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
     "npm-run-all": "^4.1.5",
@@ -65,8 +62,7 @@
     "tsc-alias": "^1.8.2",
     "typescript": "^4.6.4",
     "vite": "^3.1.0",
-    "vite-plugin-dts": "^1.7.1",
-    "wait-on": "^7.0.1"
+    "vite-plugin-dts": "^1.7.1"
   },
   "files": [
     "build/main",
@@ -78,12 +74,8 @@
   "readme": "ERROR: No README data found!",
   "_id": "raulburigo-test-comp@0.0.15",
   "packageManager": "yarn@3.1.1",
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged && lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{js,ts,tsx}": "eslint --quiet --fix --cache"
-  }
+  },
+  "stableVersion": "0.0.15"
 }
