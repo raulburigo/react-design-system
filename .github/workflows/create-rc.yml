@@ -1,0 +1,30 @@
+name: 'pre-release'
+
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  pre-release:
+    name: 'Pre Release'
+    runs-on: 'ubuntu-latest'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
+
+      # - name: Install dependencies and build 🔧
+      #   run: yarn && yarn bump:next
+
+      - uses: 'marvinpinto/action-automatic-releases@latest'
+        with:
+          repo_token: '${{ secrets.GITHUB_TOKEN }}'
+          prerelease: true
+          title: 'Development Build'
