@@ -2,8 +2,7 @@ const themeColors = [
   'primary',
   'secondary',
   'primaryText',
-  'secondaryText',
-  'a'
+  'secondaryText'
 ] as const
 
 type ThemeColors = typeof themeColors[number]
