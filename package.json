@@ -1,6 +1,6 @@
 {
   "name": "raulburigo-test-comp",
-  "version": "0.1.0-rc.1",
+  "version": "0.1.0",
   "main": "build/main/index.js",
   "types": "build/main/index.d.ts",
   "module": "build/module/index.js",
@@ -76,6 +76,5 @@
   "packageManager": "yarn@3.1.1",
   "lint-staged": {
     "*.{js,ts,tsx}": "eslint --quiet --fix --cache"
-  },
-  "stableVersion": "0.0.15"
+  }
 }
