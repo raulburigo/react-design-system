@@ -68,10 +68,17 @@ export const LargeSecondary: StoryObj = {
   args: { ...Large.args, ...Secondary.args }
 }
 
-export const Disabled: StoryObj = { args: { disabled: true } }
-export const DisabledSecondary: StoryObj = {
-  args: { ...Disabled.args, ...Secondary.args }
-}
-export const DisabledCancel: StoryObj = {
-  args: { ...Disabled.args, ...Cancel.args }
+export const Disabled: StoryObj = {
+  args: { disabled: true, onClick: () => console.log('hello') },
+  play: async ({ canvasElement }) => {
+    console.log = jest.fn()
+    const canvas = within(canvasElement)
+    const buttonEl = canvas.getByRole('button', { name: /Click here/i })
+
+    expect(buttonEl).toBeDisabled()
+
+    userEvent.click(buttonEl)
+
+    expect(console.log).not.toHaveBeenCalled()
+  }
 }
