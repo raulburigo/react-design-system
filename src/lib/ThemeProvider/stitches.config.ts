@@ -4,7 +4,7 @@ import { gray } from '@radix-ui/colors'
 export const DEFAULT_PRIMARY_COLOR = '#002040'
 export const DEFAULT_PRIMARY_TEXT_COLOR = '#FFFFFF'
 export const DEFAULT_SECONDARY_COLOR = '#00B395'
-export const DEFAULT_SECONDARY_TEXT_COLOR = '#FFFFFF'
+export const DEFAULT_SECONDARY_TEXT_COLOR = '#ffffff'
 
 export const { styled, createTheme, globalCss } = createStitches({
   prefix: 'mf',
