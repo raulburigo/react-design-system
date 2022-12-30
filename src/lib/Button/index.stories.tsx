@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { Button } from '.'
+import { Button } from '.';
 import { IButtonProps } from './types'
 import { within, userEvent } from '@storybook/testing-library'
 import { expect, jest } from '@storybook/jest'
