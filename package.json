@@ -80,7 +80,7 @@
   "packageManager": "yarn@3.1.1",
   "husky": {
     "hooks": {
-      "pre-commit": “echo \”[Husky] pre-commit\””
+      "pre-commit": "pretty-quick --staged && lint-staged"
     }
   },
   "lint-staged": {
