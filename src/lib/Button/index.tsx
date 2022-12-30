@@ -1,5 +1,5 @@
-import { PropsWithChildren } from "react";
-import { styled } from "../ThemeProvider/stitches.config";
+import { PropsWithChildren } from 'react'
+import { styled } from '../ThemeProvider/stitches.config'
 import { IButtonProps } from './types'
 
 const StyledButton = styled('button', {
@@ -10,32 +10,32 @@ const StyledButton = styled('button', {
   lineHeight: '1.5em',
 
   '&:hover': {
-    opacity: 0.9,
+    opacity: 0.9
   },
 
   '&:disabled': {
     backgroundColor: '$gray6',
-    color: '$gray11',
+    color: '$gray11'
   },
 
   variants: {
     size: {
       xs: {
         fontSize: '$1',
-        padding: '$1 $2',
+        padding: '$1 $2'
       },
       sm: {
         fontSize: '$2',
-        padding: '$1 $2',
+        padding: '$1 $2'
       },
       md: {
         fontSize: '$3',
-        padding: '$2 $3',
+        padding: '$2 $3'
       },
       lg: {
         fontSize: '$4',
-        padding: '$2 $3',
-      },
+        padding: '$2 $3'
+      }
     },
 
     variant: {
@@ -43,30 +43,32 @@ const StyledButton = styled('button', {
         backgroundColor: '$gray2',
         color: '$gray11',
         '&:not([disabled])': {
-          border: '1px solid $gray8',
-        },
+          border: '1px solid $gray8'
+        }
       },
       primary: {
         backgroundColor: '$primary',
-        color: '$primaryText',
+        color: '$primaryText'
         // '&:hover': {
         //   backgroundColor: '$primaryLighten1',
         // },
       },
       secondary: {
         backgroundColor: '$secondary',
-        color: '$secondaryText',
-      },
-    },
+        color: '$secondaryText'
+      }
+    }
   },
 
   defaultVariants: {
     variant: 'primary',
-    size: 'md',
-  },
+    size: 'md'
+  }
 })
 
-export function Button({children, ...props}: PropsWithChildren<IButtonProps>) {
+export function Button({
+  children,
+  ...props
+}: PropsWithChildren<IButtonProps>) {
   return <StyledButton {...props}>{children}</StyledButton>
-
 }

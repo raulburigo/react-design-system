@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { Button } from ".";
-import { IButtonProps } from './types';
+import { Meta, StoryObj } from '@storybook/react'
+import { Button } from '.'
+import { IButtonProps } from './types'
 import { within, userEvent } from '@storybook/testing-library'
 import { expect, jest } from '@storybook/jest'
 import {
@@ -8,35 +8,37 @@ import {
   DEFAULT_PRIMARY_TEXT_COLOR,
   DEFAULT_SECONDARY_COLOR,
   DEFAULT_SECONDARY_TEXT_COLOR
-} from '../ThemeProvider/stitches.config';
+} from '../ThemeProvider/stitches.config'
 
 export default {
   title: 'Atoms/Button',
   component: Button,
   args: {
-    children: 'Click here',
+    children: 'Click here'
   },
   argTypes: {
     variant: { control: 'inline-radio' },
     size: { control: 'inline-radio' },
-    disabled: { control: 'boolean', defaultValue: false },
-  },
+    disabled: { control: 'boolean', defaultValue: false }
+  }
 } as Meta<IButtonProps>
 
 export const Default: StoryObj = {
   args: { onClick: () => console.log('hello') },
   play: async ({ canvasElement }) => {
-    console.log = jest.fn();
+    console.log = jest.fn()
     const canvas = within(canvasElement)
     const buttonEl = canvas.getByRole('button', { name: /Click here/i })
 
     expect(buttonEl.innerText).toBe('Click here')
-    expect(buttonEl).toHaveStyle(`background-color: ${DEFAULT_PRIMARY_COLOR}; color: ${DEFAULT_PRIMARY_TEXT_COLOR}`)
+    expect(buttonEl).toHaveStyle(
+      `background-color: ${DEFAULT_PRIMARY_COLOR}; color: ${DEFAULT_PRIMARY_TEXT_COLOR}`
+    )
 
     userEvent.click(buttonEl)
 
-    expect(console.log).toHaveBeenCalledWith('hello');
-  } 
+    expect(console.log).toHaveBeenCalledWith('hello')
+  }
 }
 
 export const Secondary: StoryObj = {
@@ -53,7 +55,9 @@ export const Secondary: StoryObj = {
     const buttonEl = canvas.getByRole('button', { name: /Click here/i })
 
     expect(buttonEl.innerText).toBe('Click here')
-    expect(buttonEl).toHaveStyle(`background-color: ${DEFAULT_SECONDARY_COLOR}; color: ${DEFAULT_SECONDARY_TEXT_COLOR}`)
+    expect(buttonEl).toHaveStyle(
+      `background-color: ${DEFAULT_SECONDARY_COLOR}; color: ${DEFAULT_SECONDARY_TEXT_COLOR}`
+    )
   }
 }
 
@@ -61,11 +65,13 @@ export const Cancel: StoryObj = { args: { variant: 'cancel' } }
 export const Large: StoryObj = { args: { size: 'lg' } }
 
 export const LargeSecondary: StoryObj = {
-  args: { ...Large.args, ...Secondary.args },
+  args: { ...Large.args, ...Secondary.args }
 }
 
 export const Disabled: StoryObj = { args: { disabled: true } }
 export const DisabledSecondary: StoryObj = {
-  args: { ...Disabled.args, ...Secondary.args },
+  args: { ...Disabled.args, ...Secondary.args }
 }
-export const DisabledCancel: StoryObj = { args: { ...Disabled.args, ...Cancel.args } }
+export const DisabledCancel: StoryObj = {
+  args: { ...Disabled.args, ...Cancel.args }
+}

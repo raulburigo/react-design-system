@@ -8,16 +8,16 @@ const ThemeContainer = styled('div', {})
 
 const ThemeProvider: React.FC<PropsWithChildren<IThemeProps>> = ({
   children,
-  colors: clientColors,
+  colors: clientColors
 }) => {
   const clientTheme = useMemo(
     () =>
       createTheme({
         colors: {
-          ...clientColors,
-        },
+          ...clientColors
+        }
       }),
-    [clientColors],
+    [clientColors]
   )
 
   return (
