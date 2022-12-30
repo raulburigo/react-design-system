@@ -6,8 +6,8 @@ import dts from 'vite-plugin-dts'
 export default defineConfig({
   resolve: {
     alias: {
-      '@lib': path.resolve(__dirname, './src/lib'),
-    },
+      '@lib': path.resolve(__dirname, './src/lib')
+    }
   },
-  plugins: [react(), dts()],
+  plugins: [react(), dts()]
 })
