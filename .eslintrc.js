@@ -12,8 +12,8 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:jsx-a11y/recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier',
-    'plugin:prettier/recommended'
+    // 'prettier',
+    // 'plugin:prettier/recommended'
   ],
   settings: {
     react: {
@@ -23,7 +23,7 @@ module.exports = {
   rules: {
     camelcase: 'off',
     'react/prop-types': 'off',
-    'prettier/prettier': 'error',
+    // 'prettier/prettier': 'error',
     'no-use-before-define': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
     'react/react-in-jsx-scope': 'off',
