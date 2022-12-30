@@ -78,14 +78,6 @@
   "readme": "ERROR: No README data found!",
   "_id": "raulburigo-test-comp@0.0.15",
   "packageManager": "yarn@3.1.1",
-  "husky": {
-    "hooks": {
-      "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
-      "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
-      "post-applypatch": "echo \"[Husky] post-applypatch\"",
-      "pre-commit": "echo \"[Husky] pre-commit\""
-    }
-  },
   "lint-staged": {
     "*.{js,ts,tsx}": "eslint --quiet --fix --cache"
   }
