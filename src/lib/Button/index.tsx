@@ -21,7 +21,7 @@ const StyledButton = styled('button', {
   variants: {
     size: {
       xs: {
-        fontSize: '$1',
+        fontSize: '$2',
         padding: '$1 $2'
       },
       sm: {
