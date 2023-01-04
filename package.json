@@ -75,6 +75,6 @@
   "_id": "raulburigo-test-comp@0.0.15",
   "packageManager": "yarn@3.1.1",
   "lint-staged": {
-    "*.{js,ts,tsx}": "eslint --quiet --fix --cache"
+    "*.{js,ts,tsx}": "eslint --quiet --fix --cache --cache-location ./node_modules/.cache/.eslintcache"
   }
 }
