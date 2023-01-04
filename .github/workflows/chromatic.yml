@@ -1,9 +1,11 @@
-name: "Chromatic"
+name: 'Chromatic'
 
 # Event for the workflow
 on:
+  push:
+    branches: ['master']
   pull_request:
-    branches: ["master"]
+    branches: ['master']
 
 # List of jobs
 jobs:
