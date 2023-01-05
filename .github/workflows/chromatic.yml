@@ -25,10 +25,6 @@ jobs:
       - name: Install dependencies
         run: yarn --prefer-offline
 
-      - name: Install dependencies
-        if: steps.yarn-cache-dir-path.outputs.cache-hit != 'true'
-        run: yarn
-
       - name: Check
         run: yarn bump:check
 
