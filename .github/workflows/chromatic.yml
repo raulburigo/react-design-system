@@ -16,19 +16,24 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-      - uses: actions/cache@v1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          node-version: 16
+
+      - name: Install dependencies
+        run: yarn --prefer-offline
+
       - name: Install dependencies
         if: steps.yarn-cache-dir-path.outputs.cache-hit != 'true'
         run: yarn
+
       - name: Check
         run: yarn bump:check
+
   chromatic-deployment:
+    needs: check
     # Operating System
     runs-on: ubuntu-latest
     # Job steps
