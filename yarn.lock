@@ -2029,7 +2029,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@istanbuljs/load-nyc-config@npm:^1.0.0":
+"@istanbuljs/load-nyc-config@npm:^1.0.0, @istanbuljs/load-nyc-config@npm:^1.1.0":
   version: 1.1.0
   resolution: "@istanbuljs/load-nyc-config@npm:1.1.0"
   dependencies:
@@ -3114,6 +3114,18 @@ __metadata:
     react-dom:
       optional: true
   checksum: c87b01e035f7e0e6f3a1e864333c03e44f76ccd04a687cbe19cde59cfa1109eb2b124c288e1cf68c3a291dc6c28c056852aa2413c8157b92792ef339a33142ef
+  languageName: node
+  linkType: hard
+
+"@storybook/addon-coverage@npm:0.0.6":
+  version: 0.0.6
+  resolution: "@storybook/addon-coverage@npm:0.0.6"
+  dependencies:
+    "@types/babel__core": ^7.1.19
+    "@types/istanbul-lib-coverage": ^2.0.4
+    babel-plugin-istanbul: ^6.1.1
+    vite-plugin-istanbul: ^3.0.1
+  checksum: 4d49c07ea116bb98b799691388f1700719fb106658b3eaa5d5c73df4f9b433fd4a78d2a28baa004803cc3074200aaea1c59afdafcbe60f6047519ea99ec14b59
   languageName: node
   linkType: hard
 
@@ -4429,7 +4441,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/babel__core@npm:^7.1.14":
+"@types/babel__core@npm:^7.1.14, @types/babel__core@npm:^7.1.19":
   version: 7.1.20
   resolution: "@types/babel__core@npm:7.1.20"
   dependencies:
@@ -4582,7 +4594,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/istanbul-lib-coverage@npm:*, @types/istanbul-lib-coverage@npm:^2.0.0, @types/istanbul-lib-coverage@npm:^2.0.1":
+"@types/istanbul-lib-coverage@npm:*, @types/istanbul-lib-coverage@npm:^2.0.0, @types/istanbul-lib-coverage@npm:^2.0.1, @types/istanbul-lib-coverage@npm:^2.0.4":
   version: 2.0.4
   resolution: "@types/istanbul-lib-coverage@npm:2.0.4"
   checksum: a25d7589ee65c94d31464c16b72a9dc81dfa0bea9d3e105ae03882d616e2a0712a9c101a599ec482d297c3591e16336962878cb3eb1a0a62d5b76d277a890ce7
@@ -16085,6 +16097,7 @@ __metadata:
     "@radix-ui/react-slot": ^1.0.0
     "@stitches/react": ^1.2.8
     "@storybook/addon-actions": ^6.5.12
+    "@storybook/addon-coverage": 0.0.6
     "@storybook/addon-essentials": ^6.5.12
     "@storybook/addon-interactions": ^6.5.12
     "@storybook/addon-links": ^6.5.12
@@ -19209,6 +19222,18 @@ __metadata:
   peerDependencies:
     vite: ">=2.9.0"
   checksum: e2714a9e1727860cb217308b000d7306f98ba626998893a72d8b0e5db577d989457827033c76125a87491ace453325726da3795f17c3fea3e8af0d5e81820e89
+  languageName: node
+  linkType: hard
+
+"vite-plugin-istanbul@npm:^3.0.1":
+  version: 3.0.4
+  resolution: "vite-plugin-istanbul@npm:3.0.4"
+  dependencies:
+    "@istanbuljs/load-nyc-config": ^1.1.0
+    istanbul-lib-instrument: ^5.1.0
+    picocolors: ^1.0.0
+    test-exclude: ^6.0.0
+  checksum: 74fa99e2e2bded28ff6ba47bddf3cdd2eae04d37f2b6d257dcf5571c75f3433c6495fe94bba1f12acd0fc6046a6e83ea618b0547726ba68190bf292c7cb34695
   languageName: node
   linkType: hard
 
