@@ -1,6 +1,6 @@
 {
   "name": "raulburigo-test-comp",
-  "version": "0.2.0",
+  "version": "0.3.0-rc.1",
   "main": "build/main/index.js",
   "types": "build/main/index.d.ts",
   "module": "build/module/index.js",
