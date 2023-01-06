@@ -49,3 +49,5 @@ jobs:
 
       - name: Create release
         run: yarn release:rc
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
