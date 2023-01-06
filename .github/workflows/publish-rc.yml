@@ -47,5 +47,5 @@ jobs:
       #     --header 'Accept: application/vnd.github.luke-cage-preview+json' \
       #     --data '{"required_status_checks":{"strict":false,"contexts":["UI Tests","check","test"]},"enforce_admins":true,"required_pull_request_reviews":{"require_code_owner_reviews":true,"required_approving_review_count":1},"restrictions":null}'
 
-      # - name: Create release
-      #   run: yarn release:rc
+      - name: Create release
+        run: yarn release:rc
