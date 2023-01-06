@@ -1,5 +1,5 @@
 import { createStitches } from '@stitches/react'
-import { gray } from '@radix-ui/colors'
+import { slate } from '@radix-ui/colors'
 
 export const DEFAULT_PRIMARY_COLOR = '#002040'
 export const DEFAULT_PRIMARY_TEXT_COLOR = '#ffffff'
@@ -14,7 +14,7 @@ export const { styled, createTheme, globalCss } = createStitches({
       primaryText: DEFAULT_PRIMARY_TEXT_COLOR,
       secondary: DEFAULT_SECONDARY_COLOR,
       secondaryText: DEFAULT_SECONDARY_TEXT_COLOR,
-      ...gray
+      ...slate
     },
     fonts: {
       sans: 'Poppins, sans-serif'

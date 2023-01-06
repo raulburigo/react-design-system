@@ -15,8 +15,8 @@ const StyledButton = styled('button', {
   },
 
   '&:disabled': {
-    backgroundColor: '$gray6',
-    color: '$gray11'
+    backgroundColor: '$slate6',
+    color: '$slate11'
   },
 
   variants: {
@@ -41,10 +41,10 @@ const StyledButton = styled('button', {
 
     variant: {
       cancel: {
-        backgroundColor: '$gray2',
-        color: '$gray11',
+        backgroundColor: '$slate2',
+        color: '$slate11',
         '&:not([disabled])': {
-          border: '1px solid $gray8'
+          border: '1px solid $slate8'
         }
       },
       primary: {
