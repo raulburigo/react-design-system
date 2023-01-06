@@ -17,7 +17,8 @@
     "types:check": "tsc --skipLibCheck --noEmit",
     "bump:stable": "yarn version apply --all",
     "bump:next": "yarn version apply --all --prerelease",
-    "bump:check": "yarn version check"
+    "bump:check": "yarn version check",
+    "release:rc": "gh release create v$npm_package_version --generate-notes"
   },
   "dependencies": {
     "@radix-ui/colors": "^0.1.8",
@@ -78,5 +79,6 @@
   "packageManager": "yarn@3.1.1",
   "lint-staged": {
     "*.{js,ts,tsx}": "eslint --quiet --fix --cache --cache-location ./node_modules/.cache/.eslintcache"
-  }
+  },
+  "stableVersion": "0.2.0"
 }
