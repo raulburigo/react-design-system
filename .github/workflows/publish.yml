@@ -1,28 +1,28 @@
 name: Publish NPM and Storybook
-on:
-  release:
-    types: [created]
+# on:
+#   release:
+#     types: [created]
 
-env:
-  FLOW: PUBLISH
+# env:
+#   FLOW: PUBLISH
 
-jobs:
-  build-and-publish-npm:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+# jobs:
+#   build-and-publish-npm:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: 'https://registry.npmjs.org'
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: 16
+#           registry-url: 'https://registry.npmjs.org'
 
-      - name: Install dependencies and build 🔧
-        run: yarn && yarn build
+#       - name: Install dependencies and build 🔧
+#         run: yarn && yarn build
 
-      - name: Publish package on NPM 📦
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+#       - name: Publish package on NPM 📦
+#         run: npm publish
+#         env:
+#           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
