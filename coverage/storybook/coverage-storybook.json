@@ -1,0 +1,331 @@
+{
+  "/Users/mercafacil/Study/react-design-system/src/lib/ThemeProvider/stitches.config.ts": {
+    "path": "/Users/mercafacil/Study/react-design-system/src/lib/ThemeProvider/stitches.config.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 4,
+          "column": 37
+        },
+        "end": {
+          "line": 4,
+          "column": null
+        }
+      },
+      "1": {
+        "start": {
+          "line": 5,
+          "column": 42
+        },
+        "end": {
+          "line": 5,
+          "column": null
+        }
+      },
+      "2": {
+        "start": {
+          "line": 6,
+          "column": 39
+        },
+        "end": {
+          "line": 6,
+          "column": null
+        }
+      },
+      "3": {
+        "start": {
+          "line": 7,
+          "column": 44
+        },
+        "end": {
+          "line": 7,
+          "column": null
+        }
+      },
+      "4": {
+        "start": {
+          "line": 9,
+          "column": 50
+        },
+        "end": {
+          "line": 61,
+          "column": null
+        }
+      }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": {
+      "0": 9,
+      "1": 9,
+      "2": 9,
+      "3": 9,
+      "4": 9
+    },
+    "f": {},
+    "b": {}
+  },
+  "/Users/mercafacil/Study/react-design-system/src/lib/Button/index.tsx": {
+    "path": "/Users/mercafacil/Study/react-design-system/src/lib/Button/index.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 67,
+          "column": 2
+        }
+      },
+      "1": {
+        "start": {
+          "line": 67,
+          "column": 2
+        },
+        "end": {
+          "line": 67,
+          "column": null
+        }
+      },
+      "2": {
+        "start": {
+          "line": 73,
+          "column": 2
+        },
+        "end": {
+          "line": 73,
+          "column": null
+        }
+      },
+      "3": {
+        "start": {
+          "line": 74,
+          "column": 1
+        },
+        "end": {
+          "line": 74,
+          "column": null
+        }
+      },
+      "4": {
+        "start": {
+          "line": 69,
+          "column": 22
+        },
+        "end": {
+          "line": 69,
+          "column": 23
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "Button",
+        "decl": {
+          "start": {
+            "line": 69,
+            "column": 7
+          },
+          "end": {
+            "line": 69,
+            "column": 22
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 72,
+            "column": 33
+          },
+          "end": {
+            "line": 74,
+            "column": 1
+          }
+        }
+      }
+    },
+    "branchMap": {},
+    "s": {
+      "0": 7,
+      "1": 7,
+      "2": 27,
+      "3": 7,
+      "4": 14
+    },
+    "f": {
+      "0": 27
+    },
+    "b": {}
+  },
+  "/Users/mercafacil/Study/react-design-system/src/lib/ThemeProvider/ThemeProvider.tsx": {
+    "path": "/Users/mercafacil/Study/react-design-system/src/lib/ThemeProvider/ThemeProvider.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": null
+        }
+      },
+      "1": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 40
+        }
+      },
+      "2": {
+        "start": {
+          "line": 7,
+          "column": 40
+        },
+        "end": {
+          "line": 7,
+          "column": null
+        }
+      },
+      "3": {
+        "start": {
+          "line": 9,
+          "column": 0
+        },
+        "end": {
+          "line": 28,
+          "column": 1
+        }
+      },
+      "4": {
+        "start": {
+          "line": 12,
+          "column": 6
+        },
+        "end": {
+          "line": 12,
+          "column": null
+        }
+      },
+      "5": {
+        "start": {
+          "line": 13,
+          "column": 2
+        },
+        "end": {
+          "line": 18,
+          "column": null
+        }
+      },
+      "6": {
+        "start": {
+          "line": 23,
+          "column": 2
+        },
+        "end": {
+          "line": 25,
+          "column": null
+        }
+      },
+      "7": {
+        "start": {
+          "line": 28,
+          "column": 1
+        },
+        "end": {
+          "line": 28,
+          "column": null
+        }
+      },
+      "8": {
+        "start": {
+          "line": 9,
+          "column": 61
+        },
+        "end": {
+          "line": 9,
+          "column": 65
+        }
+      },
+      "9": {
+        "start": {
+          "line": 30,
+          "column": 28
+        },
+        "end": {
+          "line": 30,
+          "column": null
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 9,
+            "column": 0
+          },
+          "end": {
+            "line": 9,
+            "column": 61
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 12,
+            "column": 0
+          },
+          "end": {
+            "line": 28,
+            "column": 1
+          }
+        }
+      },
+      "1": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 13,
+            "column": 2
+          },
+          "end": {
+            "line": 13,
+            "column": null
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 13,
+            "column": 2
+          },
+          "end": {
+            "line": 18,
+            "column": null
+          }
+        }
+      }
+    },
+    "branchMap": {},
+    "s": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 3,
+      "5": 6,
+      "6": 3,
+      "7": 2,
+      "8": 2,
+      "9": 4
+    },
+    "f": {
+      "0": 3,
+      "1": 3
+    },
+    "b": {}
+  }
+}

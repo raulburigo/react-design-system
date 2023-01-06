@@ -6,6 +6,7 @@ const StyledButton = styled('button', {
   borderRadius: '$3',
   cursor: 'pointer',
   border: 'none',
+  fontFamily: '$sans',
   fontWeight: 600,
   lineHeight: '1.5em',
 
