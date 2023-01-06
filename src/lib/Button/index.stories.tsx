@@ -37,7 +37,7 @@ export const Default: StoryObj = {
 
     userEvent.click(buttonEl)
 
-    expect(console.log).toHaveBeenCalledWith('hello')
+    expect(console.log).toHaveBeenCalledWith('hellos')
   }
 }
 
