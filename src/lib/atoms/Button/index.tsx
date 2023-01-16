@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react'
-import { styled } from '../ThemeProvider/stitches.config'
+import { styled } from '../../../theme/stitches.config'
 import { IButtonProps } from './types'
 
 const StyledButton = styled('button', {

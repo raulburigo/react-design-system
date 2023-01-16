@@ -1,0 +1,14 @@
+import { PropsWithChildren } from 'react'
+import { styled } from '../../../theme/stitches.config'
+import { I{{pascalCase name}}Props } from './types'
+
+const Container = styled('div', {
+  border: '1px solid red'
+})
+
+export function {{pascalCase name}}({
+  children,
+  ...props
+}: PropsWithChildren<I{{pascalCase name}}Props>) {
+  return <Container {...props}>{children}</Container>
+}

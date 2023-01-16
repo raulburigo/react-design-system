@@ -1,5 +1,5 @@
 import React, { createContext, PropsWithChildren, useMemo } from 'react'
-import { createTheme, styled } from './stitches.config'
+import { createTheme, styled } from '../../theme/stitches.config'
 import { IThemeProps } from './types'
 
 const ThemeContext = createContext({})

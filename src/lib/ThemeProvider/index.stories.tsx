@@ -8,7 +8,7 @@ import {
   DEFAULT_SECONDARY_COLOR,
   DEFAULT_SECONDARY_TEXT_COLOR,
   styled
-} from './stitches.config'
+} from '../../theme/stitches.config'
 import { IThemeProps } from './types'
 import { PropsWithChildren } from 'react'
 import { cssVar } from 'polished'
@@ -44,7 +44,7 @@ const ThemeTestChildren = () => {
 }
 
 export default {
-  title: 'Atoms/ThemeProvider',
+  title: 'ThemeProvider',
   component: ThemeProvider
 } as Meta<IThemeProps>
 

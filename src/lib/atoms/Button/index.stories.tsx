@@ -8,7 +8,7 @@ import {
   DEFAULT_PRIMARY_TEXT_COLOR,
   DEFAULT_SECONDARY_COLOR,
   DEFAULT_SECONDARY_TEXT_COLOR
-} from '../ThemeProvider/stitches.config'
+} from '../../../theme/stitches.config'
 
 export default {
   title: 'Atoms/Button',
